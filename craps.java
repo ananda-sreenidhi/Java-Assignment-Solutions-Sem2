@@ -49,9 +49,9 @@ public class craps{
             case BOX_CARS: // lose with 12 on first roll
                 gameStatus = Status.LOST;
                 break;
-            default: // did not win or lose, so remember point
+            default: // did not win or lose, so remember points
                 gameStatus = Status.CONTINUE; // game is not over
-                myPoint = sumOfDice; // remember the point
+                myPoint = sumOfDice; // remember the points
                 System.out.printf( "Point is %d\n", myPoint );
                 break;
         }
@@ -61,7 +61,7 @@ public class craps{
                 gameStatus = Status.WON;
             }
             else{
-                if ( sumOfDice == SEVEN ){ // lsoe by rolling 7 before point
+                if ( sumOfDice == SEVEN ){ // lose by rolling 7 before point
                     gameStatus = Status.LOST;
                 }
             }
